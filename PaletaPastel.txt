@@ -1,0 +1,6 @@
+Paleta pastel:
+
+#e2ded3
+#857671
+#4e413b
+#ff6d24

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap");
+@import "./menu-section", "./skills-section", "./random-section";
+:root {
+  --bg-color: #000;
+  --cards-container: #4e413b;
+  --card-front: #e2ded3;
+  --card-back: #ff6d24;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap");
+:root {
+  --bg-color: #000;
+  --cards-container: #4e413b;
+  --card-front: #e2ded3;
+  --card-back: #ff6d24;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.big-menu {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-container ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 20rem;
+  height: 30rem;
+  justify-content: space-evenly;
+}
+.menu-container ul li {
+  position: relative;
+  list-style: none;
+}
+.menu-container ul li a {
+  position: relative;
+  font-size: 3rem;
+  text-decoration: none;
+  line-height: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--clr);
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+}
+.menu-container ul li a::before {
+  content: attr(data-text);
+  color: var(--clr);
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  transition: all 1s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  border-right: 0.4rem var(--clr) solid;
+  filter: drop-shadow(0 0 1.5rem);
+}
+.menu-container ul li a:hover:before {
+  width: 100%;
+}
+.social-section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-section ul {
+  position: relative;
+  gap: 2rem;
+  display: flex;
+  list-style: none;
+}
+.social-section ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+}
+.social-section ul li a {
+  position: relative;
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 1.5rem);
+  color: var(--clr);
+  text-decoration: none;
+  transition: font-size 0.5s;
+}
+.social-section ul li:hover a {
+  font-size: 2.5rem;
+}
+
+.skills-section {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background-color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  position: relative;
+  width: 90%;
+  background-color: var(--cards-container);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-radius: 1.25rem;
+}
+.cards-container .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1 0 20rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 30rem;
+  height: 18rem;
+  background-color: var(--card-back);
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.cards-container .card .icon {
+  width: 100%;
+  height: 100%;
+  background-color: var(--card-front);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.5s;
+  z-index: 2;
+}
+.cards-container .card .icon i {
+  color: #5d5d5a;
+  font-size: 5rem;
+  transition: all ease-out 0.5s;
+}
+.cards-container .card:hover .icon i {
+  font-size: 3rem;
+}
+.cards-container .card:hover .icon {
+  width: 5rem;
+  height: 5rem;
+  transform: translateY(-4rem);
+  border-radius: 50%;
+}
+.cards-container .card .content {
+  position: absolute;
+  font-family: "Courier New", Courier, monospace;
+  padding: 1rem 1.5rem;
+  margin-top: 6.5rem;
+  color: var(--card-front);
+  font-weight: 600;
+  z-index: 1;
+  transform: scale(0);
+  transition: transform 1s ease;
+}
+.cards-container .card .content h2 {
+  margin-bottom: 0.5rem;
+}
+.cards-container .card .content p {
+  line-height: 1.25rem;
+}
+.cards-container .card:hover .content {
+  transform: scale(1);
+}
+.random-section {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.random-section div {
+  display: flex;
+  flex: 1 0 50%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}
+.random-section .buttons {
+  background-color: rgb(8, 3, 3);
+}
+.random-section .buttons button {
+  background-color: transparent;
+  color: #fff;
+  position: relative;
+  font-size: x-large;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  background-color: darkslateblue;
+  width: 12rem;
+  filter: drop-shadow(0 0 25px darkslateblue);
+  border: none;
+  height: 4rem;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.random-section .buttons button:active {
+  transform: scale(0.95);
+}
+
+.random-section .buttons button span {
+  position: absolute;
+  z-index: 9;
+}
+.random-section .buttons button::before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 15rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff6493;
+  filter: drop-shadow(0 0 25px darkslateblue);
+  animation: linear infinite 5s rotate;
+  z-index: 2;
+}
+.random-section .buttons button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+  height: 90%;
+  background-color: rgb(99, 75, 255);
+  z-index: 3;
+}
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
